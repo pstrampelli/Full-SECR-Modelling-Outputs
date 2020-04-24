@@ -1,0 +1,722 @@
+Rungwa GR Full SECR Modelling Outputs
+_________________________________________________________________________
+
+------------------------------------------------------------------------
+secr.0
+------------------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    1, sigma ~ 1, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:29:32 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~1 sigma~1 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  4 
+Log likelihood  :  -204.9182 
+AIC             :  417.8363 
+AICc            :  420.0586 
+
+Beta parameters (coefficients) 
+               beta   SE.beta       lcl        ucl
+D        -8.4979458 0.2264292 -8.941739 -8.0541528
+g0       -5.0212872 0.2160882 -5.444812 -4.5977621
+sigma     8.4321618 0.1058828  8.224635  8.6396882
+pmix.h2M -0.2623649 0.4206195 -1.086764  0.5620342
+
+Variance-covariance matrix of beta parameters 
+                    D           g0       sigma  pmix.h2M
+D         0.051270172  0.001056123 -0.00704742 0.0000000
+g0        0.001056123  0.046694108 -0.01596571 0.0000000
+sigma    -0.007047420 -0.015965708  0.01121116 0.0000000
+pmix.h2M  0.000000000  0.000000000  0.00000000 0.1769208
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.038868e-04 4.676401e-05 1.308134e-04 3.177795e-04
+g0    logit 6.552808e-03 1.406706e-03 4.300080e-03 9.973876e-03
+sigma   log 4.592417e+03 4.876239e+02 3.731761e+03 5.651568e+03
+pmix  logit 5.652175e-01 1.033658e-01 3.630769e-01 7.477719e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.038868e-04 4.676401e-05 1.308134e-04 3.177795e-04
+g0    logit 6.552808e-03 1.406706e-03 4.300080e-03 9.973876e-03
+sigma   log 4.592417e+03 4.876239e+02 3.731761e+03 5.651568e+03
+pmix  logit 4.347825e-01 1.033658e-01 2.522281e-01 6.369231e-01
+------------------------------------------------------------------
+secr.sex
+------------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    h2, sigma ~ h2, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:31:03 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~h2 sigma~h2 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  6 
+Log likelihood  :  -190.1963 
+AIC             :  392.3926 
+AICc            :  397.6426 
+
+Beta parameters (coefficients) 
+                beta   SE.beta        lcl        ucl
+D         -8.3169876 0.2222377 -8.7525655 -7.8814097
+g0        -3.9519902 0.3600892 -4.6577521 -3.2462282
+g0.h2M    -1.0926745 0.4505368 -1.9757103 -0.2096386
+sigma      7.6530004 0.1208300  7.4161780  7.8898228
+sigma.h2M  1.0132080 0.1951045  0.6308102  1.3956059
+pmix.h2M  -0.2623636 0.4206195 -1.0867627  0.5620354
+
+Variance-covariance matrix of beta parameters 
+                      D            g0        g0.h2M         sigma     sigma.h2M      pmix.h2M
+D          4.938960e-02 -1.065925e-02  1.337640e-02 -2.116126e-03 -3.310154e-03 -3.156119e-08
+g0        -1.065925e-02  1.296643e-01 -1.295998e-01 -3.221277e-02  3.214025e-02  7.052771e-08
+g0.h2M     1.337640e-02 -1.295998e-01  2.029834e-01  3.218363e-02 -6.013614e-02 -1.087941e-07
+sigma     -2.116126e-03 -3.221277e-02  3.218363e-02  1.459988e-02 -1.456707e-02 -1.511911e-08
+sigma.h2M -3.310154e-03  3.214025e-02 -6.013614e-02 -1.456707e-02  3.806578e-02  3.190327e-08
+pmix.h2M  -3.156119e-08  7.052771e-08 -1.087941e-07 -1.511911e-08  3.190327e-08  1.769208e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.443308e-04 5.497692e-05 1.580553e-04 3.777002e-04
+g0    logit 1.885411e-02 6.661159e-03 9.398594e-03 3.746266e-02
+sigma   log 2.106958e+03 2.555157e+02 1.662667e+03 2.669971e+03
+pmix  logit 5.652172e-01 1.033659e-01 3.630766e-01 7.477716e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.443308e-04 5.497692e-05 1.580553e-04 3.777002e-04
+g0    logit 6.402366e-03 1.724016e-03 3.773993e-03 1.084133e-02
+sigma   log 5.803454e+03 8.955120e+02 4.296475e+03 7.839001e+03
+pmix  logit 4.347828e-01 1.033659e-01 2.522284e-01 6.369234e-01
+----------------------------------------------------------------
+secr.sex.s
+----------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    1, sigma ~ h2, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:31:53 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~1 sigma~h2 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  5 
+Log likelihood  :  -193.0215 
+AIC             :  396.043 
+AICc            :  399.5724 
+
+Beta parameters (coefficients) 
+                beta   SE.beta        lcl        ucl
+D         -8.2234654 0.2301996 -8.6746483 -7.7722825
+g0        -4.6990278 0.2172447 -5.1248195 -4.2732361
+sigma      7.8440082 0.1157920  7.6170601  8.0709563
+sigma.h2M  0.6955985 0.1386167  0.4239147  0.9672823
+pmix.h2M  -0.2623647 0.4206196 -1.0867640  0.5620345
+
+Variance-covariance matrix of beta parameters 
+                      D            g0         sigma     sigma.h2M      pmix.h2M
+D          5.299185e-02 -5.116901e-03 -7.739382e-03  6.893144e-03  3.466144e-09
+g0        -5.116901e-03  4.719524e-02 -1.247302e-02 -4.099591e-03 -2.061436e-09
+sigma     -7.739382e-03 -1.247302e-02  1.340778e-02 -9.013303e-03 -4.532243e-09
+sigma.h2M  6.893144e-03 -4.099591e-03 -9.013303e-03  1.921460e-02  9.661854e-09
+pmix.h2M   3.466144e-09 -2.061436e-09 -4.532243e-09  9.661854e-09  1.769208e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.682837e-04 6.258609e-05 1.708630e-04 4.212507e-04
+g0    logit 9.021987e-03 1.942295e-03 5.912130e-03 1.374505e-02
+sigma   log 2.550407e+03 2.963093e+02 2.032578e+03 3.200161e+03
+pmix  logit 5.652175e-01 1.033659e-01 3.630768e-01 7.477719e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.682837e-04 6.258609e-05 1.708630e-04 4.212507e-04
+g0    logit 9.021987e-03 1.942295e-03 5.912130e-03 1.374505e-02
+sigma   log 5.113333e+03 6.200179e+02 4.035226e+03 6.479481e+03
+pmix  logit 4.347825e-01 1.033659e-01 2.522281e-01 6.369232e-01
+--------------------------------------------------------------------
+secr.sex.g
+--------------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    h2, sigma ~ 1, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:32:27 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~h2 sigma~1 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  5 
+Log likelihood  :  -202.5009 
+AIC             :  415.0018 
+AICc            :  418.5312 
+
+Beta parameters (coefficients) 
+               beta   SE.beta         lcl        ucl
+D        -8.4317926 0.2304586 -8.88348314 -7.9801020
+g0       -5.3756082 0.2855782 -5.93533112 -4.8158852
+g0.h2M    0.6850988 0.3153076  0.06710726  1.3030903
+sigma     8.4130359 0.1012733  8.21454381  8.6115279
+pmix.h2M -0.2623647 0.4206195 -1.08676375  0.5620344
+
+Variance-covariance matrix of beta parameters 
+                     D            g0        g0.h2M         sigma      pmix.h2M
+D         5.311117e-02 -9.505355e-03  1.498986e-02 -6.206329e-03 -3.387291e-08
+g0       -9.505355e-03  8.155490e-02 -5.884989e-02 -1.435038e-02  3.522939e-08
+g0.h2M    1.498986e-02 -5.884989e-02  9.941888e-02 -1.876947e-03 -5.741700e-08
+sigma    -6.206329e-03 -1.435038e-02 -1.876947e-03  1.025629e-02  3.451578e-09
+pmix.h2M -3.387291e-08  3.522939e-08 -5.741700e-08  3.451578e-09  1.769208e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.178307e-04 5.087494e-05 1.386604e-04 3.422045e-04
+g0    logit 4.606783e-03 1.309536e-03 2.637373e-03 8.034965e-03
+sigma   log 4.505418e+03 4.574511e+02 3.694291e+03 5.494638e+03
+pmix  logit 5.652175e-01 1.033658e-01 3.630769e-01 7.477718e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.178307e-04 5.087494e-05 1.386604e-04 3.422045e-04
+g0    logit 9.098466e-03 2.267834e-03 5.576926e-03 1.481056e-02
+sigma   log 4.505418e+03 4.574511e+02 3.694291e+03 5.494638e+03
+pmix  logit 4.347825e-01 1.033658e-01 2.522282e-01 6.369231e-01
+
+--------------------------------------------------------------------
+secr.road
+--------------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    road, sigma ~ 1, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:36:01 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~road sigma~1 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  5 
+Log likelihood  :  -195.575 
+AIC             :  401.1499 
+AICc            :  404.6794 
+
+Beta parameters (coefficients) 
+              beta   SE.beta       lcl        ucl
+D        -8.512843 0.2294759 -8.962608 -8.0630790
+g0       -4.288215 0.2584009 -4.794671 -3.7817585
+g0.road  -1.171006 0.2613162 -1.683176 -0.6588355
+sigma     8.477661 0.1075185  8.266929  8.6883937
+pmix.h2M -0.262364 0.4206195 -1.086763  0.5620351
+
+Variance-covariance matrix of beta parameters 
+                     D            g0       g0.road         sigma      pmix.h2M
+D         5.265919e-02  1.277839e-03  8.282372e-05 -8.005103e-03  4.331630e-10
+g0        1.277839e-03  6.677102e-02 -3.774175e-02 -1.481798e-02  1.985693e-08
+g0.road   8.282372e-05 -3.774175e-02  6.828614e-02 -1.395090e-03 -3.425419e-08
+sigma    -8.005103e-03 -1.481798e-02 -1.395090e-03  1.156023e-02  1.582911e-11
+pmix.h2M  4.331630e-10  1.985693e-08 -3.425419e-08  1.582911e-11  1.769208e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.008718e-04 4.670879e-05 1.281117e-04 3.149556e-04
+g0    logit 4.238827e-03 1.030215e-03 2.631403e-03 6.821451e-03
+sigma   log 4.806197e+03 5.182522e+02 3.892975e+03 5.933644e+03
+pmix  logit 5.652173e-01 1.033659e-01 3.630767e-01 7.477717e-01
+
+ session = 1, h2 = M, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.008718e-04 4.670879e-05 1.281117e-04 3.149556e-04
+g0    logit 4.238827e-03 1.030215e-03 2.631403e-03 6.821451e-03
+sigma   log 4.806197e+03 5.182522e+02 3.892975e+03 5.933644e+03
+pmix  logit 4.347827e-01 1.033659e-01 2.522283e-01 6.369233e-01
+
+ session = 1, h2 = F, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.008718e-04 4.670879e-05 1.281117e-04 3.149556e-04
+g0    logit 1.354347e-02 3.452247e-03 8.205824e-03 2.227511e-02
+sigma   log 4.806197e+03 5.182522e+02 3.892975e+03 5.933644e+03
+pmix  logit 5.652173e-01 1.033659e-01 3.630767e-01 7.477717e-01
+
+ session = 1, h2 = M, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.008718e-04 4.670879e-05 1.281117e-04 3.149556e-04
+g0    logit 1.354347e-02 3.452247e-03 8.205824e-03 2.227511e-02
+sigma   log 4.806197e+03 5.182522e+02 3.892975e+03 5.933644e+03
+pmix  logit 4.347827e-01 1.033659e-01 2.522283e-01 6.369233e-01
+
+--------------------------------------------------------------------
+secr.road.sex
+--------------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    road + h2, sigma ~ h2, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:38:08 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~road + h2 sigma~h2 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  7 
+Log likelihood  :  -183.9701 
+AIC             :  381.9402 
+AICc            :  389.4068 
+
+Beta parameters (coefficients) 
+                beta   SE.beta        lcl         ucl
+D         -8.2788195 0.2295927 -8.7288128 -7.82882610
+g0        -3.5966497 0.3595233 -4.3013024 -2.89199704
+g0.road   -1.0152077 0.2771995 -1.5585087 -0.47190674
+g0.h2M    -0.7893870 0.4398899 -1.6515553  0.07278134
+sigma      7.7575221 0.1282839  7.5060903  8.00895400
+sigma.h2M  0.9367342 0.2016129  0.5415802  1.33188828
+pmix.h2M  -0.2623647 0.4206195 -1.0867638  0.56203432
+
+Variance-covariance matrix of beta parameters 
+                      D            g0       g0.road        g0.h2M         sigma     sigma.h2M      pmix.h2M
+D          5.271279e-02 -1.177226e-02 -3.544237e-03  1.663917e-02 -3.721925e-03 -1.826031e-03  5.919550e-09
+g0        -1.177226e-02  1.292570e-01 -2.912091e-02 -1.124450e-01 -2.717849e-02  2.749976e-02 -6.499546e-08
+g0.road   -3.544237e-03 -2.912091e-02  7.683955e-02 -1.508911e-02 -5.764819e-03  4.744380e-03  1.464313e-08
+g0.h2M     1.663917e-02 -1.124450e-01 -1.508911e-02  1.935031e-01  3.046428e-02 -5.835064e-02  5.654174e-08
+sigma     -3.721925e-03 -2.717849e-02 -5.764819e-03  3.046428e-02  1.645676e-02 -1.634457e-02  1.366641e-08
+sigma.h2M -1.826031e-03  2.749976e-02  4.744380e-03 -5.835064e-02 -1.634457e-02  4.064777e-02 -1.382795e-08
+pmix.h2M   5.919550e-09 -6.499546e-08  1.464313e-08  5.654174e-08  1.366641e-08 -1.382795e-08  1.769208e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.538367e-04 5.905556e-05 1.618545e-04 3.980925e-04
+g0    logit 9.835649e-03 3.744794e-03 4.653365e-03 2.066941e-02
+sigma   log 2.339101e+03 3.013079e+02 1.819087e+03 3.007769e+03
+pmix  logit 5.652175e-01 1.033658e-01 3.630769e-01 7.477718e-01
+
+ session = 1, h2 = M, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.538367e-04 5.905556e-05 1.618545e-04 3.980925e-04
+g0    logit 4.490706e-03 1.313225e-03 2.530043e-03 7.958666e-03
+sigma   log 5.968532e+03 9.383300e+02 4.394037e+03 8.107210e+03
+pmix  logit 4.347825e-01 1.033658e-01 2.522282e-01 6.369231e-01
+
+ session = 1, h2 = F, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.538367e-04 5.905556e-05 1.618545e-04 3.980925e-04
+g0    logit 2.668387e-02 9.337481e-03 1.336973e-02 5.255060e-02
+sigma   log 2.339101e+03 3.013079e+02 1.819087e+03 3.007769e+03
+pmix  logit 5.652175e-01 1.033658e-01 3.630769e-01 7.477718e-01
+
+ session = 1, h2 = M, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.538367e-04 5.905556e-05 1.618545e-04 3.980925e-04
+g0    logit 1.229688e-02 3.799673e-03 6.698200e-03 2.246934e-02
+sigma   log 5.968532e+03 9.383300e+02 4.394037e+03 8.107210e+03
+pmix  logit 4.347825e-01 1.033658e-01 2.522282e-01 6.369231e-01
+--------------------------------------------------------------------
+secr.road.sex.s
+--------------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    road, sigma ~ h2, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:39:06 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~road sigma~h2 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  6 
+Log likelihood  :  -185.5262 
+AIC             :  383.0525 
+AICc            :  388.3025 
+
+Beta parameters (coefficients) 
+                beta   SE.beta        lcl        ucl
+D         -8.2033748 0.2366609 -8.6672217 -7.7395280
+g0        -4.0848956 0.2561049 -4.5868520 -3.5829393
+g0.road   -1.0738194 0.2691505 -1.6013446 -0.5462941
+sigma      7.8939649 0.1249864  7.6489961  8.1389336
+sigma.h2M  0.7003345 0.1500247  0.4062916  0.9943774
+pmix.h2M  -0.2623641 0.4206194 -1.0867629  0.5620348
+
+Variance-covariance matrix of beta parameters 
+                      D            g0       g0.road         sigma     sigma.h2M      pmix.h2M
+D          5.600838e-02 -3.697992e-03 -1.986463e-03 -1.025303e-02  8.991735e-03 -2.661899e-09
+g0        -3.697992e-03  6.558972e-02 -3.766570e-02 -1.115777e-02 -4.510984e-03 -3.071276e-08
+g0.road   -1.986463e-03 -3.766570e-02  7.244198e-02 -2.519933e-03  4.587369e-04  1.870910e-08
+sigma     -1.025303e-02 -1.115777e-02 -2.519933e-03  1.562159e-02 -1.099580e-02  1.113967e-08
+sigma.h2M  8.991735e-03 -4.510984e-03  4.587369e-04 -1.099580e-02  2.250740e-02 -9.049295e-09
+pmix.h2M  -2.661899e-09 -3.071276e-08  1.870910e-08  1.113967e-08 -9.049295e-09  1.769207e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737282e-04 6.569850e-05 1.721367e-04 4.352770e-04
+g0    logit 5.716219e-03 1.423161e-03 3.506967e-03 9.304220e-03
+sigma   log 2.681053e+03 3.364080e+02 2.098538e+03 3.425263e+03
+pmix  logit 5.652173e-01 1.033658e-01 3.630768e-01 7.477717e-01
+
+ session = 1, h2 = M, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737282e-04 6.569850e-05 1.721367e-04 4.352770e-04
+g0    logit 5.716219e-03 1.423161e-03 3.506967e-03 9.304220e-03
+sigma   log 5.400784e+03 6.888553e+02 4.210426e+03 6.927675e+03
+pmix  logit 4.347827e-01 1.033658e-01 2.522283e-01 6.369232e-01
+
+ session = 1, h2 = F, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737282e-04 6.569850e-05 1.721367e-04 4.352770e-04
+g0    logit 1.654650e-02 4.167522e-03 1.008218e-02 2.704227e-02
+sigma   log 2.681053e+03 3.364080e+02 2.098538e+03 3.425263e+03
+pmix  logit 5.652173e-01 1.033658e-01 3.630768e-01 7.477717e-01
+
+ session = 1, h2 = M, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737282e-04 6.569850e-05 1.721367e-04 4.352770e-04
+g0    logit 1.654650e-02 4.167522e-03 1.008218e-02 2.704227e-02
+sigma   log 5.400784e+03 6.888553e+02 4.210426e+03 6.927675e+03
+pmix  logit 4.347827e-01 1.033658e-01 2.522283e-01 6.369232e-01
+--------------------------------------------------------------------
+secr.road.sex.g
+--------------------------------------------------------------------
+secr.fit(capthist = Rungwa.lion.MLFR.noM.noprobM.capthist, model = list(g0 ~ 
+    road + h2, sigma ~ 1, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:39:55 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  480519.8 ha 
+
+Model           :  D~1 g0~road + h2 sigma~1 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  6 
+Log likelihood  :  -193.4075 
+AIC             :  398.815 
+AICc            :  404.065 
+
+Beta parameters (coefficients) 
+               beta   SE.beta         lcl        ucl
+D        -8.4429157 0.2342097 -8.90195821 -7.9838732
+g0       -4.6440233 0.3214339 -5.27402212 -4.0140244
+g0.road  -1.1617504 0.2630292 -1.67727812 -0.6462227
+g0.h2M    0.6622095 0.3215970  0.03189089  1.2925281
+sigma     8.4575243 0.1042876  8.25312439  8.6619243
+pmix.h2M -0.2623648 0.4206194 -1.08676365  0.5620340
+
+Variance-covariance matrix of beta parameters 
+                     D            g0       g0.road        g0.h2M         sigma      pmix.h2M
+D         5.485417e-02 -9.737458e-03 -7.247430e-05  1.642529e-02 -7.408795e-03 -3.050522e-08
+g0       -9.737458e-03  1.033198e-01 -3.820373e-02 -6.111870e-02 -1.316204e-02 -1.554141e-08
+g0.road  -7.247430e-05 -3.820373e-02  6.918435e-02  5.857392e-06 -1.343496e-03  1.932369e-08
+g0.h2M    1.642529e-02 -6.111870e-02  5.857392e-06  1.034247e-01 -2.567698e-03 -2.937969e-08
+sigma    -7.408795e-03 -1.316204e-02 -1.343496e-03 -2.567698e-03  1.087590e-02  1.098833e-08
+pmix.h2M -3.050522e-08 -1.554141e-08  1.932369e-08 -2.937969e-08  1.098833e-08  1.769207e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.154211e-04 5.115359e-05 1.361221e-04 3.409164e-04
+g0    logit 3.001091e-03 9.275301e-04 1.636836e-03 5.496154e-03
+sigma   log 4.710382e+03 4.925731e+02 3.839604e+03 5.778644e+03
+pmix  logit 5.652175e-01 1.033658e-01 3.630770e-01 7.477718e-01
+
+ session = 1, h2 = M, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.154211e-04 5.115359e-05 1.361221e-04 3.409164e-04
+g0    logit 5.802978e-03 1.603987e-03 3.373333e-03 9.965080e-03
+sigma   log 4.710382e+03 4.925731e+02 3.839604e+03 5.778644e+03
+pmix  logit 4.347825e-01 1.033658e-01 2.522282e-01 6.369230e-01
+
+ session = 1, h2 = F, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.154211e-04 5.115359e-05 1.361221e-04 3.409164e-04
+g0    logit 9.527278e-03 3.033214e-03 5.096853e-03 1.774017e-02
+sigma   log 4.710382e+03 4.925731e+02 3.839604e+03 5.778644e+03
+pmix  logit 5.652175e-01 1.033658e-01 3.630770e-01 7.477718e-01
+
+ session = 1, h2 = M, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.154211e-04 5.115359e-05 1.361221e-04 3.409164e-04
+g0    logit 1.831026e-02 5.225347e-03 1.044040e-02 3.192097e-02
+sigma   log 4.710382e+03 4.925731e+02 3.839604e+03 5.778644e+03
+pmix  logit 4.347825e-01 1.033658e-01 2.522282e-01 6.369230e-01
+--------------------------------------------------------------------
+AIC Rankings
+--------------------------------------------------------------------
+model   detectfn npar    logLik     AIC    AICc  dAICc AICcwt
+Rungwa.lion.MLFR.noM.noprobM.secr.road.sex.s      D~1 g0~road sigma~h2 pmix~h2 halfnormal    6 -185.5262 383.052 388.302  0.000 0.6310
+Rungwa.lion.MLFR.noM.noprobM.secr.road.sex   D~1 g0~road + h2 sigma~h2 pmix~h2 halfnormal    7 -183.9701 381.940 389.407  1.105 0.3631
+Rungwa.lion.MLFR.noM.noprobM.secr.sex               D~1 g0~h2 sigma~h2 pmix~h2 halfnormal    6 -190.1963 392.393 397.643  9.341 0.0059
+Rungwa.lion.MLFR.noM.noprobM.secr.sex.s              D~1 g0~1 sigma~h2 pmix~h2 halfnormal    5 -193.0215 396.043 399.572 11.270 0.0000
+Rungwa.lion.MLFR.noM.noprobM.secr.road.sex.g  D~1 g0~road + h2 sigma~1 pmix~h2 halfnormal    6 -193.4075 398.815 404.065 15.763 0.0000
+Rungwa.lion.MLFR.noM.noprobM.secr.road             D~1 g0~road sigma~1 pmix~h2 halfnormal    5 -195.5750 401.150 404.679 16.377 0.0000
+Rungwa.lion.MLFR.noM.noprobM.secr.sex.g              D~1 g0~h2 sigma~1 pmix~h2 halfnormal    5 -202.5009 415.002 418.531 30.229 0.0000
+Rungwa.lion.MLFR.noM.noprobM.secr.0                   D~1 g0~1 sigma~1 pmix~h2 halfnormal    4 -204.9182 417.836 420.059 31.757 0.0000
+ 
+ ----------------------------------------------------------------------------
+10. Buffer Test Results (using secr.sex.s, as it was the highest ranked)
+----------------------------------------------------------------------------
+
+### BUFFER COMPARISON
+#    10 KM = 2.794
+#    11 KM = 2.774
+#    12 KM = 2.759
+#    13 KM = 2.750
+#    14 KM = 2.744
+#    15 KM = 2.741
+#    16 KM = 2.739
+#    17 KM = 2.738
+#    18 KM = 2.738
+#    19 KM = 2.738
+#    20 KM = 2.737
+#    21 KM = 2.737
+#    22 KM = 2.737
+#    23 KM = 2.737
+#    24 KM = 2.737
+#    25 KM = 2.737
+
+Went with 20km because that's when it stopped completely. Here at the results:
+
+secr.fit(capthist = RGI.BT.capthist, model = list(g0 ~ road, 
+    sigma ~ h2, D ~ 1), buffer = 20000, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.2.0, 17:58:33 24 Mar 2020
+
+Detector type      count 
+Detector number    40 
+Average spacing    3457.8 m 
+x-range            630379 660060 m 
+y-range            9228623 9258932 m 
+
+ Usage range by occasion
+     1
+min 65
+max 91
+
+N animals       :  23  
+N detections    :  68 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  363802.5 ha 
+
+Model           :  D~1 g0~road sigma~h2 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  6 
+Log likelihood  :  -185.5251 
+AIC             :  383.0502 
+AICc            :  388.3002 
+
+Beta parameters (coefficients) 
+                beta   SE.beta        lcl        ucl
+D         -8.2033316 0.2366635 -8.6671835 -7.7394798
+g0        -4.0851257 0.2561938 -4.5872563 -3.5829950
+g0.road   -1.0738657 0.2691442 -1.6013787 -0.5463528
+sigma      7.8940351 0.1250140  7.6490121  8.1390580
+sigma.h2M  0.7005225 0.1501559  0.4062223  0.9948227
+pmix.h2M  -0.2623647 0.4206197 -1.0867642  0.5620348
+
+Variance-covariance matrix of beta parameters 
+                      D            g0       g0.road         sigma     sigma.h2M      pmix.h2M
+D          5.600959e-02 -3.706092e-03 -1.986840e-03 -1.025344e-02  9.000034e-03  2.464807e-08
+g0        -3.706092e-03  6.563527e-02 -3.765436e-02 -1.117297e-02 -4.552241e-03  1.149464e-08
+g0.road   -1.986840e-03 -3.765436e-02  7.243859e-02 -2.522316e-03  4.517322e-04  1.633116e-08
+sigma     -1.025344e-02 -1.117297e-02 -2.522316e-03  1.562850e-02 -1.098530e-02 -1.104685e-08
+sigma.h2M  9.000034e-03 -4.552241e-03  4.517322e-04 -1.098530e-02  2.254680e-02  1.763927e-09
+pmix.h2M   2.464807e-08  1.149464e-08  1.633116e-08 -1.104685e-08  1.763927e-09  1.769209e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737400e-04 6.570207e-05 1.721433e-04 4.352980e-04
+g0    logit 5.714649e-03 1.423508e-03 3.505115e-03 9.304011e-03
+sigma   log 2.681241e+03 3.365066e+02 2.098571e+03 3.425689e+03
+pmix  logit 5.652175e-01 1.033659e-01 3.630768e-01 7.477719e-01
+
+ session = 1, h2 = M, road = 1 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737400e-04 6.570207e-05 1.721433e-04 4.352980e-04
+g0    logit 5.714649e-03 1.423508e-03 3.505115e-03 9.304011e-03
+sigma   log 5.402178e+03 6.904804e+02 4.209329e+03 6.933060e+03
+pmix  logit 4.347825e-01 1.033659e-01 2.522281e-01 6.369232e-01
+
+ session = 1, h2 = F, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737400e-04 6.570207e-05 1.721433e-04 4.352980e-04
+g0    logit 1.654276e-02 4.168042e-03 1.007815e-02 2.704081e-02
+sigma   log 2.681241e+03 3.365066e+02 2.098571e+03 3.425689e+03
+pmix  logit 5.652175e-01 1.033659e-01 3.630768e-01 7.477719e-01
+
+ session = 1, h2 = M, road = 0 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 2.737400e-04 6.570207e-05 1.721433e-04 4.352980e-04
+g0    logit 1.654276e-02 4.168042e-03 1.007815e-02 2.704081e-02
+sigma   log 5.402178e+03 6.904804e+02 4.209329e+03 6.933060e+03
+pmix  logit 4.347825e-01 1.033659e-01 2.522281e-01 6.369232e-01

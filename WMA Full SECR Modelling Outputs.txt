@@ -1,0 +1,278 @@
+WMA Full SECR Modelling Outputs
+----------------------------------------------------------------------------
+1. secr.0, buffer = 15000
+----------------------------------------------------------------------------
+secr.fit(capthist = WMA.lion.MRFR.capthist, model = list(g0 ~ 
+    1, sigma ~ 1, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.1.0, 11:39:43 27 Dec 2019
+
+Detector type      count 
+Detector number    40 
+Average spacing    2079.756 m 
+x-range            736249 754843 m 
+y-range            9155332 9175415 m 
+
+ Usage range by occasion
+     1
+min 65
+max 69
+
+N animals       :  18  
+N detections    :  52 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  188287.5 ha 
+
+Model           :  D~1 g0~1 sigma~1 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  4 
+Log likelihood  :  -141.8411 
+AIC             :  291.6823 
+AICc            :  294.7592 
+
+Beta parameters (coefficients) 
+                  beta   SE.beta        lcl        ucl
+D        -7.918881e+00 0.2538326 -8.4163834 -7.4213780
+g0       -4.224325e+00 0.2365795 -4.6880119 -3.7606373
+sigma     7.844531e+00 0.1087938  7.6312989  8.0577628
+pmix.h2M -5.974625e-07 0.4714043 -0.9239361  0.9239349
+
+Variance-covariance matrix of beta parameters 
+                     D            g0         sigma      pmix.h2M
+D         6.443097e-02 -1.594479e-03 -8.180264e-03  3.331372e-09
+g0       -1.594479e-03  5.596986e-02 -1.400706e-02 -6.844482e-08
+sigma    -8.180264e-03 -1.400706e-02  1.183610e-02  1.578758e-08
+pmix.h2M  3.331372e-09 -6.844482e-08  1.578758e-08  2.222220e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 3.638093e-04 9.385431e-05 2.212132e-04 5.983241e-04
+g0    logit 1.442412e-02 3.363228e-03 9.121010e-03 2.273978e-02
+sigma   log 2.551740e+03 2.784371e+02 2.061726e+03 3.158217e+03
+pmix  logit 5.000001e-01 1.178511e-01 2.841568e-01 7.158434e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 3.638093e-04 9.385431e-05 2.212132e-04 5.983241e-04
+g0    logit 1.442412e-02 3.363228e-03 9.121010e-03 2.273978e-02
+sigma   log 2.551740e+03 2.784371e+02 2.061726e+03 3.158217e+03
+pmix  logit 4.999999e-01 1.178511e-01 2.841566e-01 7.158432e-01
+
+----------------------------------------------------------------------------
+2. secr.sex, buffer = 15000
+----------------------------------------------------------------------------
+secr.fit(capthist = WMA.lion.MRFR.capthist, model = list(g0 ~ 
+    h2, sigma ~ h2, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.1.0, 11:41:58 27 Dec 2019
+
+Detector type      count 
+Detector number    40 
+Average spacing    2079.756 m 
+x-range            736249 754843 m 
+y-range            9155332 9175415 m 
+
+ Usage range by occasion
+     1
+min 65
+max 69
+
+N animals       :  18  
+N detections    :  52 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  188287.5 ha 
+
+Model           :  D~1 g0~h2 sigma~h2 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  6 
+Log likelihood  :  -134.9528 
+AIC             :  281.9055 
+AICc            :  289.5419 
+
+Beta parameters (coefficients) 
+                   beta   SE.beta         lcl        ucl
+D         -7.794500e+00 0.2520686 -8.28854498 -7.3004544
+g0        -4.261364e+00 0.3760121 -4.99833388 -3.5243934
+g0.h2M     4.656354e-01 0.4851822 -0.48530428  1.4165752
+sigma      7.494629e+00 0.1539224  7.19294667  7.7963113
+sigma.h2M  4.470155e-01 0.2017022  0.05168652  0.8423445
+pmix.h2M  -4.257796e-07 0.4714046 -0.92393653  0.9239357
+
+Variance-covariance matrix of beta parameters 
+                      D            g0        g0.h2M         sigma     sigma.h2M      pmix.h2M
+D          6.353855e-02 -8.324658e-03  9.728610e-03 -6.376419e-03  2.005484e-03  8.095986e-08
+g0        -8.324658e-03  1.413851e-01 -1.413187e-01 -3.953762e-02  3.948335e-02 -1.709556e-08
+g0.h2M     9.728610e-03 -1.413187e-01  2.354018e-01  3.949791e-02 -6.367342e-02  1.377909e-07
+sigma     -6.376419e-03 -3.953762e-02  3.949791e-02  2.369210e-02 -2.365965e-02 -4.111578e-09
+sigma.h2M  2.005484e-03  3.948335e-02 -6.367342e-02 -2.365965e-02  4.068377e-02 -3.201103e-08
+pmix.h2M   8.095986e-08 -1.709556e-08  1.377909e-07 -4.111578e-09 -3.201103e-08  2.222223e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 4.119949e-04 1.055226e-04 2.513800e-04 6.752319e-04
+g0    logit 1.390693e-02 5.156452e-03 6.703936e-03 2.862608e-02
+sigma   log 1.798357e+03 2.784551e+02 1.330017e+03 2.431616e+03
+pmix  logit 5.000001e-01 1.178512e-01 2.841567e-01 7.158435e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 4.119949e-04 1.055226e-04 2.513800e-04 6.752319e-04
+g0    logit 2.197289e-02 6.593973e-03 1.216299e-02 3.937940e-02
+sigma   log 2.811981e+03 3.688186e+02 2.176932e+03 3.632286e+03
+pmix  logit 4.999999e-01 1.178512e-01 2.841565e-01 7.158433e-01
+----------------------------------------------------------------------------
+3. secr.sex.s, buffer = 15000
+----------------------------------------------------------------------------
+secr.fit(capthist = WMA.lion.MRFR.capthist, model = list(g0 ~ 
+    1, sigma ~ h2, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.1.0, 11:42:54 27 Dec 2019
+
+Detector type      count 
+Detector number    40 
+Average spacing    2079.756 m 
+x-range            736249 754843 m 
+y-range            9155332 9175415 m 
+
+ Usage range by occasion
+     1
+min 65
+max 69
+
+N animals       :  18  
+N detections    :  52 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  188287.5 ha 
+
+Model           :  D~1 g0~1 sigma~h2 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  5 
+Log likelihood  :  -135.4195 
+AIC             :  280.839 
+AICc            :  285.839 
+
+Beta parameters (coefficients) 
+                   beta   SE.beta        lcl        ucl
+D         -7.811209e+00 0.2485981 -8.2984519 -7.3239652
+g0        -3.996045e+00 0.2382644 -4.4630352 -3.5290558
+sigma      7.421004e+00 0.1227783  7.1803627  7.6616449
+sigma.h2M  5.729192e-01 0.1516725  0.2756466  0.8701919
+pmix.h2M  -7.009727e-07 0.4714046 -0.9239368  0.9239354
+
+Variance-covariance matrix of beta parameters 
+                     D            g0        sigma     sigma.h2M  pmix.h2M
+D          0.061801025 -0.0017118757 -0.006388568  0.0021155441 0.0000000
+g0        -0.001711876  0.0567699267 -0.015690528  0.0006595639 0.0000000
+sigma     -0.006388568 -0.0156905276  0.015074518 -0.0109103134 0.0000000
+sigma.h2M  0.002115544  0.0006595639 -0.010910313  0.0230045449 0.0000000
+pmix.h2M   0.000000000  0.0000000000  0.000000000  0.0000000000 0.2222223
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 4.051681e-04 1.023005e-04 2.489018e-04 6.595418e-04
+g0    logit 1.805619e-02 4.224467e-03 1.139596e-02 2.849671e-02
+sigma   log 1.670710e+03 2.059024e+02 1.313385e+03 2.125250e+03
+pmix  logit 5.000002e-01 1.178512e-01 2.841567e-01 7.158436e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 4.051681e-04 1.023005e-04 2.489018e-04 6.595418e-04
+g0    logit 1.805619e-02 4.224467e-03 1.139596e-02 2.849671e-02
+sigma   log 2.962898e+03 3.793357e+02 2.307710e+03 3.804102e+03
+pmix  logit 4.999998e-01 1.178512e-01 2.841564e-01 7.158433e-01
+----------------------------------------------------------------------------
+4. secr.sex.g, buffer = 15000
+----------------------------------------------------------------------------
+secr.fit(capthist = WMA.lion.MRFR.capthist, model = list(g0 ~ 
+    h2, sigma ~ 1, D ~ 1), buffer = buffer, detectfn = "HN", 
+    binomN = 1, hcov = "V5", details = list(minprob = 1e-200), 
+    trace = FALSE)
+secr 4.1.0, 11:43:46 27 Dec 2019
+
+Detector type      count 
+Detector number    40 
+Average spacing    2079.756 m 
+x-range            736249 754843 m 
+y-range            9155332 9175415 m 
+
+ Usage range by occasion
+     1
+min 65
+max 69
+
+N animals       :  18  
+N detections    :  52 
+N occasions     :  1 
+Count model     :  Binomial, size from usage
+Mask area       :  188287.5 ha 
+
+Model           :  D~1 g0~h2 sigma~1 pmix~h2 
+Mixture (hcov)  :  V5 
+Fixed (real)    :  none 
+Detection fn    :  halfnormal
+Distribution    :  poisson 
+N parameters    :  5 
+Log likelihood  :  -137.1393 
+AIC             :  284.2785 
+AICc            :  289.2785 
+
+Beta parameters (coefficients) 
+                  beta   SE.beta        lcl        ucl
+D        -7.858271e+00 0.2538256 -8.3557604 -7.3607825
+g0       -4.764386e+00 0.3196789 -5.3909450 -4.1378267
+g0.h2M    1.150162e+00 0.3739725  0.4171897  1.8831350
+sigma     7.817659e+00 0.0994146  7.6228103  8.0125084
+pmix.h2M -1.452282e-07 0.4714043 -0.9239357  0.9239354
+
+Variance-covariance matrix of beta parameters 
+                     D            g0        g0.h2M         sigma      pmix.h2M
+D         6.442741e-02 -1.124628e-02  1.518234e-02 -6.015564e-03 -8.287994e-08
+g0       -1.124628e-02  1.021946e-01 -8.117907e-02 -1.406161e-02 -2.345623e-08
+g0.h2M    1.518234e-02 -8.117907e-02  1.398554e-01 -7.089259e-04 -7.011800e-08
+sigma    -6.015564e-03 -1.406161e-02 -7.089259e-04  9.883263e-03  2.454285e-08
+pmix.h2M -8.287994e-08 -2.345623e-08 -7.011800e-08  2.454285e-08  2.222220e-01
+
+Fitted (real) parameters evaluated at base levels of covariates 
+
+ session = 1, h2 = F 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 3.865414e-04 9.971583e-05 2.350387e-04 6.357008e-04
+g0    logit 8.456010e-03 2.680350e-03 4.536986e-03 1.570685e-02
+sigma   log 2.484084e+03 2.475657e+02 2.044299e+03 3.018479e+03
+pmix  logit 5.000000e-01 1.178511e-01 2.841567e-01 7.158433e-01
+
+ session = 1, h2 = M 
+       link     estimate  SE.estimate          lcl          ucl
+D       log 3.865414e-04 9.971583e-05 2.350387e-04 6.357008e-04
+g0    logit 2.623122e-02 7.210767e-03 1.525438e-02 4.474791e-02
+sigma   log 2.484084e+03 2.475657e+02 2.044299e+03 3.018479e+03
+pmix  logit 5.000000e-01 1.178511e-01 2.841567e-01 7.158433e-01
+----------------------------------------------------------------------------
+5. Model comparison
+----------------------------------------------------------------------------
+   model   detectfn npar    logLik     AIC    AICc dAICc AICcwt
+WMA.lion.MRFR.secr.sex.s  D~1 g0~1 sigma~h2 pmix~h2 halfnormal    5 -135.4195 280.839 285.839 0.000 0.7420
+WMA.lion.MRFR.secr.sex.g  D~1 g0~h2 sigma~1 pmix~h2 halfnormal    5 -137.1393 284.279 289.279 3.440 0.1329
+WMA.lion.MRFR.secr.sex   D~1 g0~h2 sigma~h2 pmix~h2 halfnormal    6 -134.9528 281.906 289.542 3.703 0.1165
+WMA.lion.MRFR.secr.0       D~1 g0~1 sigma~1 pmix~h2 halfnormal    4 -141.8411 291.682 294.759 8.920 0.0086
